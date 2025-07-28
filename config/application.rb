@@ -23,5 +23,8 @@ module Cbweb3
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    #### CB mods
+    config.active_job.queue_adapter = :solid_queue
   end
 end
