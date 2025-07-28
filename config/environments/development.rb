@@ -8,6 +8,11 @@ Rails.application.configure do
   # Use Solid Queue in Development.
   config.active_job.queue_adapter = :solid_queue
 
+  # https://github.com/rails/solid_queue/
+  config.solid_queue.logger = ActiveSupport::Logger.new(STDOUT)
+
+  ### end CB mods
+
   # Make code changes take effect immediately without server restart.
   config.enable_reloading = true
 
