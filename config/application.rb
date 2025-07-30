@@ -25,7 +25,13 @@ module Cbweb3
     # config.eager_load_paths << Rails.root.join("extras")
 
     #### CB mods
+
+    # Solid Queue
     config.active_job.queue_adapter = :solid_queue
     config.solid_queue.connects_to = { database: { writing: :primary } }
+
+    # Solid Cache - maybe later
+    # config.cache_store = :solid_cache_store
+
   end
 end
