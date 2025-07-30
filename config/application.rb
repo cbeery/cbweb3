@@ -26,5 +26,6 @@ module Cbweb3
 
     #### CB mods
     config.active_job.queue_adapter = :solid_queue
+    config.solid_queue.connects_to = { database: { writing: :primary } }
   end
 end

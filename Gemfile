@@ -45,22 +45,20 @@ gem "image_processing", "~> 1.2"
 ### CB gems
 
 # Authentication
-gem "devise"
+gem "devise", "~> 4.9"
 
 # Pagination
-gem "kaminari"
+gem "kaminari", "~> 1.2"
 
-# File Storage
-gem "aws-sdk-s3", require: false
+# HTTP requests and RSS
+gem "httparty", "~> 0.21"
+gem "feedjira", "~> 3.2"
 
-# Job Processing
-gem "mission_control-jobs"
+# Background jobs monitoring
+gem "mission_control-jobs", "~> 1.1"
 
-# HTTP requests
-gem "httparty"
-
-# RSS feed parsing
-gem "feedjira"
+# File uploads
+gem 'aws-sdk-s3', '~> 1.140', require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -78,6 +76,10 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  # Suggested by Claude
+  gem "annotate"
+  gem "better_errors", "~> 2.10"
+  gem "binding_of_caller", "~> 1.0"
 end
 
 group :test do
